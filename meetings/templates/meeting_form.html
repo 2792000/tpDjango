@@ -1,0 +1,8 @@
+<!-- meeting_form.html -->
+<h1>Create a New Meeting</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Render form fields -->
+    <button type="submit">Create Meeting</button>
+</form>
+<a href="{% url 'all' %}">Back to Meeting List</a>
